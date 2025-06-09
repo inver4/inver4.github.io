@@ -609,6 +609,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    justify-content: center; 
 }
 
 .project-card {
@@ -876,4 +877,13 @@ section {
 /* Smooth scrolling offset for fixed navbar */
 html {
     scroll-padding-top: 70px;
+}
+
+.project-image {
+  max-width: 100%;
+  max-height: 200px;
+  display: block;
+  margin: 0 auto 1rem auto;
+  object-fit: contain;
+  border-radius: 10px;
 }
