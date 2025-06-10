@@ -506,7 +506,7 @@ section {
 
 .cert-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 1.5rem;
 }
 
@@ -514,7 +514,7 @@ section {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 2rem;
     background: rgba(0, 212, 255, 0.1);
     border-radius: 10px;
     border: 1px solid rgba(0, 212, 255, 0.2);
@@ -526,9 +526,9 @@ section {
     border-color: #00d4ff;
 }
 
-.cert-item i {
-    color: #ff006e;
-    font-size: 2rem;
+.cert-item img {
+    width: 150px;
+    height: 150px;
 }
 
 .cert-item h4 {

@@ -133,14 +133,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Dynamic Typing Effect for Hero Title
-function typeWriter(element, text, speed = 100) {
+// Typewriter Effect for Hero Section
+
+function typeWriter(element, text, speed = 50) { // Adjusted default speed slightly
     let i = 0;
-    element.innerHTML = '';
+    element.textContent = ''; // <-- CHANGED to textContent
     
     function type() {
         if (i < text.length) {
-            element.innerHTML += text.charAt(i);
+            element.textContent += text.charAt(i); // <-- CHANGED to textContent
             i++;
             setTimeout(type, speed);
         }
@@ -149,14 +150,22 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typing effect when page loads
 window.addEventListener('load', function() {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const originalText = heroTitle.innerHTML;
+    // Select the SPAN element *inside* the H1
+    const gradientSpan = document.querySelector('.hero-title .gradient-text'); 
+
+    if (gradientSpan) {
+        // Get the PLAIN TEXT content of the span
+        const originalText = gradientSpan.textContent; 
+
+        // Clear the span's initial content before typing
+        gradientSpan.textContent = ''; 
+
+        // Add a slight delay before starting the typing
         setTimeout(() => {
-            typeWriter(heroTitle, originalText, 50);
-        }, 500);
+            // Call typeWriter on the SPAN, passing the PLAIN TEXT
+            typeWriter(gradientSpan, originalText, 50); 
+        }, 500); // Delay in milliseconds
     }
 });
 
