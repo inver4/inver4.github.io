@@ -128,9 +128,9 @@ body {
 
 .hero-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 1fr; 
+    justify-items: center;     
+    text-align: center;
 }
 
 .hero-title {
@@ -164,6 +164,7 @@ body {
 .hero-buttons {
     display: flex;
     gap: 1rem;
+    justify-content: center;
 }
 
 .btn {
